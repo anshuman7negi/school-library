@@ -3,7 +3,6 @@ require './decorator'
 require './capitalize_decorator'
 require './trimmer_decorator'
 
-
 person = Person.new(22, 'maximilianus')
 puts person.correct_name
 capitalized_person = CapitalizeDecorator.new(person)
