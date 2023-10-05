@@ -14,8 +14,7 @@ class Person < Nameable
   end
 
   def rent_book(book, date)
-    rental = Rental.new(self, book, date)
-    rentals << rental
+    Rental.new(date, book, self)
   end
 
   def can_use_services?
