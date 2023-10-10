@@ -16,21 +16,20 @@ class Options
   end
 
   def option_handle(option)
-    case option
-    when 1
-      @app.list_books
-    when 2
-      @app.list_people
-    when 3
-      @app.create_person
-    when 4
-      @app.create_book
-    when 5
-      @app.create_rental
-    when 6
-      @app.list_rentals
-    when 7
-      exit
+    options = {
+      1 => -> { @app.list_books },
+      2 => -> { @app.list_people },
+      3 => -> { @app.create_person },
+      4 => -> { @app.create_book },
+      5 => -> { @app.create_rental },
+      6 => -> { @app.list_rentals },
+      7 => -> { exit }
+    }
+
+    action = options[option]
+
+    if action
+      action.call
     else
       puts 'Invalid option'
     end
