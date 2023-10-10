@@ -1,9 +1,13 @@
 require_relative 'options'
+require_relative 'app'
+
 
 def main
   puts 'Welcome to School library App'
 
-  list = Options.new
+  app = App.new
+
+  list = Options.new(app)
   loop do
     list.list_options
     option = gets.chomp.to_i

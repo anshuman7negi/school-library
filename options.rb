@@ -1,5 +1,3 @@
-require_relative 'app'
-
 class Options
   def initialize(app)
     @app = app
@@ -35,6 +33,6 @@ class Options
       exit
     else
       puts 'Invalid option'
-    end
-  end
+    end
+  end
 end
