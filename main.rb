@@ -1,7 +1,6 @@
 require_relative 'options'
 require_relative 'app'
 
-
 def main
   puts 'Welcome to School library App'
 
